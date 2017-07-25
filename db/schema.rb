@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170721032928) do
+ActiveRecord::Schema.define(version: 20170725000710) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "comments", force: :cascade do |t|
+    t.bigint "store_id"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "comment"
+    t.index ["store_id"], name: "index_comments_on_store_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
+  end
 
   create_table "stores", force: :cascade do |t|
     t.string "name"
@@ -22,6 +32,11 @@ ActiveRecord::Schema.define(version: 20170721032928) do
     t.string "rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.string "comment"
   end
 
   create_table "users", force: :cascade do |t|
@@ -30,6 +45,9 @@ ActiveRecord::Schema.define(version: 20170721032928) do
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "comment"
   end
 
+  add_foreign_key "comments", "stores"
+  add_foreign_key "comments", "users"
 end

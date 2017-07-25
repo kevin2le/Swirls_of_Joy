@@ -1,0 +1,23 @@
+<div class="font2"><h1>New Location</h1></div>
+
+<%= form_for @store do |s| %>
+  <div class="field">
+    <%= s.label :name %>
+    <%= s.text_field :name %>
+  </div>
+  <div class="field">
+    <%= s.label :location %>
+    <%= s.text_field :location %>
+  </div>
+  <div class="field">
+    <%= s.label :contact_info %>
+    <%= s.text_field :contact_info %>
+  </div>
+  <div class="field">
+    <% s.label :image_content_type %>
+    <%= s.url_field :image_content_type %>
+  </div>
+  <div class="actions"><%= s.submit %></div>
+<% end %>
+
+<% link_to "Return to Stores", stores_path %>

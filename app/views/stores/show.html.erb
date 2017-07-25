@@ -1,0 +1,18 @@
+ <div class="font2">   
+    <h2><%= @store.name %></h2>
+</div>        
+ <div class="font">
+    <p><%= image_tag @store.image_content_type, size: "370x300" %></p>
+    <p><%= @store.location %></p>
+    <p><%= @store.contact_info %></p>
+ </div>
+<div>
+    <%= form_for [@store, @comment] do |c| %>
+    <%= c.label :comment %>
+    <%= c.text_field :comment, "size"=> 60, "height"=> 30%>
+    <% end %>
+</div>
+ <% @stores.each do |store| %>
+<dd> <%= @store.comment %> <dd>
+<% end %>
+<%= link_to "Lets take a trip back", stores_path %>

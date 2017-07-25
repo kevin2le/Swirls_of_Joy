@@ -13,12 +13,52 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+    padding-top: 80px;
+    background-image: url("http://i.imgur.com/jK5gBQb.jpg");
+    background-attachment: fixed;            
+ }
+
 .navbar {
-    display: flex
+    display: flex;
+    align-items: center;
+    background-color: pink;       
+    /*justify-content: space-between*/
 }
-.logger {
-    justify-content: flex-end
-    align-content: center
 
+#logger {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    text-align: right;
+    
+    /*align-content: center*/
+}
 
+.swirls {
+    text-align: center;
+    font-family: 'Londrina Sketch', cursive;
+    font-weight: bold;
+}
+
+#title-world {
+    font-size: 40px;
+}
+
+.general {
+    text-align: center;
+}
+
+.font {
+    font-family: 'Marvel', sans-serif;
+    font-size: 20px;
+}
+
+.font2{
+    font-family: 'Londrina Sketch', sans-serif;
+}
+
+linker:link, linker:active{
+    font: black;
 }

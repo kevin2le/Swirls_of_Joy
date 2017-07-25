@@ -1,6 +1,6 @@
 class Store < ApplicationRecord
-    def index
-    end
-    def show
-    end
+    validates :name, presence: true, uniqueness: true
+    validates :contact_info, presence:true
+    validates :location, presence:true
+    has_many :comments
 end
