@@ -8,11 +8,31 @@
  </div>
 <div>
     <%= form_for [@store, @comment] do |c| %>
-    <%= c.label :comment %>
-    <%= c.text_field :comment, "size"=> 60, "height"=> 30%>
+        <%= c.label :comment %>
+        <%= c.text_field :comment, "size"=> 60, "height"=> 30%>
+
+        <div>
+            <span class="star" id="1"> * &nbsp;</span>
+            <span class="star" id="2"> * &nbsp;</span>
+            <span class="star" id="3"> * &nbsp;</span>
+            <span class="star" id="4"> * &nbsp;</span>
+            <span class="star" id="5"> * &nbsp;</span>
+            <input id="aj" type="number">
+        </div>
+        
+
+
+
+
     <% end %>
 </div>
- <% @stores.each do |store| %>
-<dd> <%= @store.comment %> <dd>
-<% end %>
-<%= link_to "Lets take a trip back", stores_path %>
+    <% @store.comments.each do |content| %>
+    <dd> <%= content.comment %> <dd>
+    <% end %>
+    <%= @user %>
+<div><%= link_to "Lets take a trip back", stores_path %></div>
+
+<div><%= link_to "Remove Store!", store_path(@store), method: :delete, data: { confirm: "Verify please"} %></div>
+
+
+

@@ -13,3 +13,10 @@
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .
+
+
+// window.onload(function () {
+    var ratingInput = document.getElementById('aj')
+    var stars = document.querySelectorAll('.star')
+// })
+    

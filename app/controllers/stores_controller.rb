@@ -20,6 +20,13 @@ class StoresController < ApplicationController
         end
     end   
 
+    def destroy
+        @store = Store.find(params[:id])
+        @store.destroy
+        redirect_to stores_path
+    end
+
+
 
     private
 

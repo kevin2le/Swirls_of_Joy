@@ -1,7 +1,7 @@
 class CommentsController <ApplicationController
     def index
     end
-    
+
     def new
         @comment =Comment.new
         @store = Store.find(params[:store_id])
@@ -13,6 +13,7 @@ class CommentsController <ApplicationController
         @comment.user_id = current_user.id
         
         if @comment.save
+           created_at(Time.now)
             redirect_to store_path(params[:store_id])
         else 
             render :new
@@ -22,6 +23,7 @@ class CommentsController <ApplicationController
 
     def show
         @store = Store.find(params[:store_id])
+        @user = User.find(params[:user_id])
         @comment = Comment.new
     end
 
