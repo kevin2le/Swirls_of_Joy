@@ -1,4 +1,7 @@
 class StoresController < ApplicationController
+    
+    before_action only: [:show, :edit, :update, :destroy]
+    before_action :authorize, except: [:index]
     def index
         @stores = Store.all
     end

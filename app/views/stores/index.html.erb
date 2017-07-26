@@ -1,13 +1,15 @@
 <h2 class="font2">Store Locations</h2>
 <h3 class="font2"><%= link_to '+Add Stores', new_store_path %></h3>
-<div class="font">
-  <dl class= "profile">
-      <% @stores.each do |store| %>
-          <dl><%= image_tag store.image_content_type, size: "370x300" %></dl>
-              <dd><%= link_to store.name, store_path(store) %> </dd>
-              <dd><%= store.location %></dd>
-              <dd><%= store.contact_info %></dd>
-              <dd>Rating:<%= store.rating%></dd>
-      <% end %>
-  </dl>
+<div>
+    <div class="font">
+    <dl class= "profile">
+        <% @stores.each do |store| %>
+            <dl><%= image_tag store.image_content_type, size: "370x300" %></dl>
+                <dd><%= link_to store.name, store_path(store) %> </dd>
+                <dd><%= store.location %></dd>
+                <dd><%= store.contact_info %></dd>
+                <dd>Rating:<%= store.rating%></dd>
+        <% end %>
+    </dl>
+    </div>
 </div>

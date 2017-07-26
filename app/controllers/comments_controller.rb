@@ -13,7 +13,7 @@ class CommentsController <ApplicationController
         @comment.user_id = current_user.id
         
         if @comment.save
-           created_at(Time.now)
+          
             redirect_to store_path(params[:store_id])
         else 
             render :new

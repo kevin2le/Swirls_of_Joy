@@ -12,6 +12,8 @@
         <%= c.text_field :comment, "size"=> 60, "height"=> 30%>
         <%= c.submit %>
 
+
+
         <div>
             <span class="star" id="1"> * &nbsp;</span>
             <span class="star" id="2"> * &nbsp;</span>
@@ -27,10 +29,13 @@
 
     <% end %>
 </div>
+  <div>
     <% @store.comments.each do |content| %>
     <dd> <%= content.comment %> <dd>
+    By: <%= content.user.name %>
+    <%= content.created_at.strftime("%b %d %Y") %>
     <% end %>
-    <%= @user %>
+    
 <div><%= link_to "Lets take a trip back", stores_path %></div>
 
 <div><%= link_to "Remove Store!", store_path(@store), method: :delete, data: { confirm: "Verify please"} %></div>
