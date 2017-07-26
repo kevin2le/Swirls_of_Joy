@@ -62,3 +62,7 @@
 linker:link, linker:active{
     font: black;
 }
+
+.bold {
+    font-weight: bold;
+}

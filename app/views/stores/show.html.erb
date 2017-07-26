@@ -10,6 +10,7 @@
     <%= form_for [@store, @comment] do |c| %>
         <%= c.label :comment %>
         <%= c.text_field :comment, "size"=> 60, "height"=> 30%>
+        <%= c.submit %>
 
         <div>
             <span class="star" id="1"> * &nbsp;</span>
