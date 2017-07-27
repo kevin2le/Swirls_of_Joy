@@ -43,6 +43,7 @@ class StoresController < ApplicationController
         @store = Store.find(params[:id])
         @store.destroy
         redirect_to stores_path
+       
     end
 
     def random
@@ -50,7 +51,7 @@ class StoresController < ApplicationController
         @comment = Comment.new
         render :show
     end
-    
+
 
     private
 

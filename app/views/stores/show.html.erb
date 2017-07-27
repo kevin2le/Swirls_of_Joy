@@ -22,7 +22,7 @@
         <dd> <%= content.comment %> <dd>
         By: <%= content.user.name %>
         <%= content.created_at.strftime("%b %d %Y") %>
-        <%= link_to "Remove Comment!", store_comments_path(content), method: :delete, data: { confirm: "Verify please"} %>
+        <%= link_to "Remove Comment!", comment_path(content), method: :delete %>
         </div>
     <% end %>
 </div>  

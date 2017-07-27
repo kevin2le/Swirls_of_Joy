@@ -21,11 +21,11 @@ class CommentsController <ApplicationController
         end
     end
 
-    def show
-        @store = Store.find(params[:store_id])
-        @user = User.find(params[:user_id])
-        @comment = Comment.new
-    end
+    # def show
+    #     @store = Store.find(params[:store_id])
+    #     @user = User.find(params[:user_id])
+    #     @comment = Comment.new
+    # end
 
     def update
         @comment = Comment.find(params[:id])
@@ -34,12 +34,12 @@ class CommentsController <ApplicationController
     def destroy
         @comment = Comment.find(params[:id])
         @comment.destroy
-        redirect_to store_path
+        redirect_back(fallback_location: stores_path)
     end
 
 private
 
-    # def comment_params
-    #     params.require(:comment).permit(:comment)
-    # end
+    def comment_params
+        params.require(:comment).permit(:comment)
+    end
 end
