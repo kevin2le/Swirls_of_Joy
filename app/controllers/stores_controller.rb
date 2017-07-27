@@ -14,6 +14,7 @@ class StoresController < ApplicationController
     def new
         @store = Store.new
     end
+    
     def create
         @store = Store.new(params.require(:store).permit(:name, :location, :contact_info, :image_content_type))
         if @store.save
@@ -22,6 +23,16 @@ class StoresController < ApplicationController
             render :new
         end
     end   
+
+    def edit
+        @store = Store.find(params[:id])
+    end
+    
+    def update
+        @store = Store.find(params[:id])
+
+    end
+    
 
     def destroy
         @store = Store.find(params[:id])

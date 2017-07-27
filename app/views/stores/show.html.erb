@@ -18,14 +18,21 @@
 </div>  
 <div>
     <% @store.comments.each do |content| %>
+        <div class="bckclr2">
         <dd> <%= content.comment %> <dd>
         By: <%= content.user.name %>
         <%= content.created_at.strftime("%b %d %Y") %>
+        <%= link_to "Remove Comment!", store_comments_path(content), method: :delete, data: { confirm: "Verify please"} %>
+        </div>
     <% end %>
 </div>  
 <div><%= link_to "Lets take a trip back", stores_path %></div>
 
-<div><%= link_to "Remove Store!", store_path(@store), method: :delete, data: { confirm: "Verify please"} %></div>
+<div>
+<%= link_to "Remove Store!", store_path(@store), method: :delete, data: { confirm: "Verify please"} %>
+<%= link_to "Edit Store", edit_store_path %>
+</div>
+
 
 
 

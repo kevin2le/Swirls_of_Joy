@@ -70,4 +70,10 @@ linker:link, linker:active{
 .bckclr {
     padding: 20px 0px;
 }
+.bckclr2 {
+    padding: 20px 0px;
+    background-color: rgba(180,216,231,.8);
+    margin: 30px 600px 30px 0px;
+    border-radius: 10px;
+}
 

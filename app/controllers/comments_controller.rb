@@ -27,10 +27,19 @@ class CommentsController <ApplicationController
         @comment = Comment.new
     end
 
+    def update
+        @comment = Comment.find(params[:id])
+    end
+
+    def destroy
+        @comment = Comment.find(params[:id])
+        @comment.destroy
+        redirect_to store_path
+    end
 
 private
 
-    def comment_params
-        params.require(:comment).permit(:comment)
-    end
+    # def comment_params
+    #     params.require(:comment).permit(:comment)
+    # end
 end

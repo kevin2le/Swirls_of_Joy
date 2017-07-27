@@ -1,0 +1,23 @@
+<h1>Edit <%= @store.name %></h1>
+
+<%= form_for @store do |s| %>
+ 
+    <div class="field">
+      <%= s.label :name %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <%= s.text_field :name %>
+    </div>
+    <div class="field">
+      <%= s.label :location %>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <%= s.text_field :location %>
+    </div>
+    <div class="field">
+      <%= s.label :contact_info %>
+      <%= s.text_field :contact_info %>
+    </div>
+    <div class="field">
+      <% s.label :image_content_type %>
+      <p class="bold">Image url <%= s.url_field :image_content_type %></p>
+    </div>
+      <div class="actions"><%= s.submit "Update Store" %></div>
+  
+<% end %>
