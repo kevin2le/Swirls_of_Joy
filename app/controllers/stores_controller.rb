@@ -30,6 +30,11 @@ class StoresController < ApplicationController
     
     def update
         @store = Store.find(params[:id])
+        if @store.save
+            redirect_to store_path
+        else
+            render :edit
+        end
 
     end
     
