@@ -66,3 +66,8 @@ linker:link, linker:active{
 .bold {
     font-weight: bold;
 }
+
+.bckclr {
+    padding: 20px 0px;
+}
+

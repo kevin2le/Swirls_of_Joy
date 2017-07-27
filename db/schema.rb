@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725000710) do
+ActiveRecord::Schema.define(version: 20170727013257) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,6 +23,27 @@ ActiveRecord::Schema.define(version: 20170725000710) do
     t.string "comment"
     t.index ["store_id"], name: "index_comments_on_store_id"
     t.index ["user_id"], name: "index_comments_on_user_id"
+  end
+
+  create_table "share_my_cones", force: :cascade do |t|
+    t.string "images"
+    t.string "content"
+    t.string "nickname"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shares", force: :cascade do |t|
+    t.string "image_file_name"
+    t.string "image_content_type"
+    t.integer "image_file_size"
+    t.datetime "image_updated_at"
+    t.string "content"
+    t.string "nickname"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "stores", force: :cascade do |t|

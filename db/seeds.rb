@@ -28,3 +28,5 @@ stores = Store.create ([
 comments = Comment.create([{
     
 }])
+
+

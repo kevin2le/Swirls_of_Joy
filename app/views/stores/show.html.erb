@@ -11,31 +11,18 @@
         <%= c.label :comment %>
         <%= c.text_field :comment, "size"=> 60, "height"=> 30%>
         <%= c.submit %>
-
-
-
-        <div>
-            <span class="star" id="1"> * &nbsp;</span>
-            <span class="star" id="2"> * &nbsp;</span>
-            <span class="star" id="3"> * &nbsp;</span>
-            <span class="star" id="4"> * &nbsp;</span>
-            <span class="star" id="5"> * &nbsp;</span>
-            <input id="aj" type="number">
-        </div>
-        
-
-
-
-
     <% end %>
 </div>
-  <div>
+<div>
+   <p class="bold">Rate Me!(1-5): <input id="rating" type="number"></p>
+</div>  
+<div>
     <% @store.comments.each do |content| %>
-    <dd> <%= content.comment %> <dd>
-    By: <%= content.user.name %>
-    <%= content.created_at.strftime("%b %d %Y") %>
+        <dd> <%= content.comment %> <dd>
+        By: <%= content.user.name %>
+        <%= content.created_at.strftime("%b %d %Y") %>
     <% end %>
-    
+</div>  
 <div><%= link_to "Lets take a trip back", stores_path %></div>
 
 <div><%= link_to "Remove Store!", store_path(@store), method: :delete, data: { confirm: "Verify please"} %></div>

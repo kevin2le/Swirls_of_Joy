@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   root "swirls#index"
   resources :swirls
   resources :abouts
+  get "stores/random", to: 'stores#random'
   resources :stores , shallow: true do
     resources :comments
   end
+  resources :shares
   resources :users, only:[:new, :create]
   resources :sessions, only:[:new, :create, :destroy]
 

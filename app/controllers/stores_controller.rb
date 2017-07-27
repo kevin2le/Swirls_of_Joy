@@ -29,7 +29,12 @@ class StoresController < ApplicationController
         redirect_to stores_path
     end
 
-
+    def random
+        @store = Store.all.to_a.sample
+        @comment = Comment.new
+        render :show
+    end
+    
 
     private
 
