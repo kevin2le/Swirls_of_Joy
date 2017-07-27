@@ -5,7 +5,7 @@ class SharesController < ApplicationController
     end
 
     def new
-        @share= Share.all
+        @share= Share.new
     end
     
     def create
