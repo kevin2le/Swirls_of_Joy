@@ -3,15 +3,19 @@
         <h3>Feel free to post your opinions, pictures and<br> where you found some awesome ice cream</h3>
         <%= link_to "Create a Post", new_share_path %>
 </div>
-<div class= ".text-center">    
+<div>    
     <div class="font">
         <dl class= "profile">
             <% @shares.each do |share| %>
-            <div class="bckclr">
-                <dl><%= image_tag share.image_content_type, size: "370x300" %></dl>
-                    <dd><%= share.nickname %> </dd>
-                    <dd><%= share.location %></dd>
-                    <dd><%= share.content %></dd>
+            <div class= "center">
+                <div class="button">
+                    <div class="bckclr">
+                        <dl><%= image_tag share.image_content_type, size: "370x300" %></dl>
+                            <dd>Nickname:<%= share.nickname %> </dd>
+                            <dd>Location:<%= share.location %></dd>
+                            <dd>Comments:<%= share.content %></dd>
+                    </div>
+                </div>
             </div>
             <% end %>
         </dl>

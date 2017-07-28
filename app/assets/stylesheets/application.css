@@ -83,3 +83,7 @@ linker:link, linker:active{
     border-radius: 10px;
     margin: auto 350px
 }
+
+.center {
+    text-align: center;
+}
