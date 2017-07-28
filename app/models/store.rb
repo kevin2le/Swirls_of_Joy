@@ -5,8 +5,6 @@ class Store < ApplicationRecord
     has_many :comments
     has_many :ratings
 
-    def average_rating
-        store.rating.average(:rating)
-    end
+
 
 end
