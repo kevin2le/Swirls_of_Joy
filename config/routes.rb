@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get "stores/random", to: 'stores#random'
   resources :stores , shallow: true do
     resources :comments
+    resources :ratings
   end
   resources :shares
   resources :users, only:[:new, :create]
