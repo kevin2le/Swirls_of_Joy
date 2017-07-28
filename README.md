@@ -3,13 +3,13 @@
 
 Welcome to Swirls of Joy! This is where you want to be if you want to learn about ice cream's rich history and share new places to check out or contribute. We are only showing locations from the Los Angeles/Orange County area for now. We hope to expand to world one day.Don't make this a rocky road (get it rocky road... ha!) and be a jerk on this site be respectful to one another.
 #### Homepage
-<img src="http://i.imgur.com/FDmnPGn.png"= 250x>
+<img src="http://i.imgur.com/FDmnPGn.png">
 
 #### Store Page
-<img src="http://i.imgur.com/NFhpr4Y.png"= 250x>
+<img src="http://i.imgur.com/NFhpr4Y.png">
 
 #### Share My Cone
-<img src="http://i.imgur.com/TwgtjCH.png"= 250x>
+<img src="http://i.imgur.com/TwgtjCH.png">
 
 ## Technologies:
 * Bootstrap
