@@ -1,7 +1,7 @@
 class SharesController < ApplicationController
     def index
         @shares= Share.all
-        @share= Share.new
+    
     end
 
     def new
@@ -9,7 +9,7 @@ class SharesController < ApplicationController
     end
     
     def create
-        @share = Share.new(params.require(:share).permit(:nickname, :location, :image_file_name, :content))
+        @share = Share.new(params.require(:share).permit(:nickname, :location, :image_content_type, :content))
         if @share.save
             redirect_to shares_path
         else
@@ -18,6 +18,6 @@ class SharesController < ApplicationController
     end   
     private
         def share_params
-            params.require(:share).permit(:image_file_name, :nickname, :content, :location)
+            params.require(:share).permit(:image_content_type, :nickname, :content, :location)
         end
 end

@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
     end
     
     def authorize
-      redirect_to login_path, alert:'not authorized- you must be logged in' if current_user.nil?
+      redirect_to login_path, alert:'unauthorized entry- you must be logged in' if current_user.nil?
     end
 
     helper_method :average_rating

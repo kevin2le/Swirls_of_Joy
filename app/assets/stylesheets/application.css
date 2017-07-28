@@ -39,7 +39,7 @@
 .swirls {
     text-align: center;
     font-family: 'Londrina Sketch', cursive;
-    font-weight: bold;
+    font-weight: 300px;
 }
 
 #title-world {
@@ -70,6 +70,7 @@ linker:link, linker:active{
 .bckclr {
     padding: 20px 0px;
 }
+
 .bckclr2 {
     padding: 20px 0px;
     background-color: rgba(180,216,231,.8);
@@ -77,3 +78,8 @@ linker:link, linker:active{
     border-radius: 10px;
 }
 
+.button {
+    background-color: rgba(180,216,231,.6);
+    border-radius: 10px;
+    margin: auto 350px
+}

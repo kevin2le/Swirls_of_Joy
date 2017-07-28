@@ -14,7 +14,7 @@
     <% end %>
 </div>
     
-    <p> Average rating: <%= average_rating (@store) %>  </p>
+<p> Average rating: <%= average_rating (@store) %>  </p>
 <div>
    <%= link_to image_tag("1s.png", {width: 30}), store_ratings_path(@store, rating:1), method: :post %>
    <%= link_to image_tag("2s.png", {width: 30}), store_ratings_path(@store, rating:2), method: :post %>
@@ -29,15 +29,15 @@
         <dd> <%= content.comment %> <dd>
         By: <%= content.user.name %>
         <%= content.created_at.strftime("%b %d %Y") %>
-        <%= link_to "Remove Comment!", comment_path(content), method: :delete %>
+        <%= link_to "Delete", comment_path(content), method: :delete %>
         </div>
     <% end %>
 </div>  
 <div><%= link_to "Lets take a trip back", stores_path %></div>
 
 <div>
-<%= link_to "Remove Store!", store_path(@store), method: :delete, data: { confirm: "Verify please"} %>
-<%= link_to "Edit Store", edit_store_path %>
+    <%= link_to "Remove Store!", store_path(@store), method: :delete, data: { confirm: "Verify please"} %>
+    <%= link_to "Edit Store", edit_store_path %>
 </div>
 
 

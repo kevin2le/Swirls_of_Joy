@@ -1,0 +1,19 @@
+<h3>POST!</h3>
+<%= form_for @share do |share| %>
+   <div class="field">
+        <%= share.label :nickname %>
+        <%= share.text_field :nickname %>
+    </div>
+    <div class="field">
+        <%= share.label :location %>&nbsp&nbsp
+        <%= share.text_field :location %>
+    </div>
+    <div class="field">
+        <%= share.label :content %>&nbsp&nbsp&nbsp
+        <%= share.text_field :content %>
+    </div>
+    <div class="field">
+       <p class="bold">Url_image<%= share.url_field :image_content_type %></p>
+    </div>
+    <div class="actions"><%= share.submit %></div>
+    <% end %>

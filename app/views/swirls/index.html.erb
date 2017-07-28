@@ -1,7 +1,12 @@
 <div class="swirls">
-<h1 id="title-word">Swirls of Joy</h1>
-<h3 class="font2">"My head says go to the gym,<br>MY HEART SAYS eat more ice cream" </h3>
-<%= image_tag "ice_cover.jpg", {width: 500}%> 
-<h3 class="linker"><%= link_to 'OC/LA LOCATIONS', stores_path %></h3> 
-<h3 class="linker"><%= link_to 'I am feeling lucky', stores_random_path %></h3>
+    <h1 id="title-word">Swirls of Joy</h1>
+    <h3 class="font2">"My head says go to the gym,<br>MY HEART SAYS eat more ice cream" </h3>
+    <%= image_tag "ice_cover.jpg", {width: 500}%> 
+    <h3 class="linker">
+        <div class="button">
+            <%= link_to 'OC/LA LOCATIONS', stores_path %>
+            &nbsp;&nbsp;&nbsp;&nbsp     
+            <%= link_to 'I am feeling lucky', stores_random_path %>
+        </div>
+    </h3>
 </div>
