@@ -13,12 +13,14 @@
         <%= c.submit %>
     <% end %>
 </div>
+<div> 
+    <p> Average rating: %>
 <div>
-   <%= link_to "1", store_ratings_path(@store, rating:1), method: :post %>
-   <%= link_to "2", store_ratings_path(@store, rating:2), method: :post %>
-   <%= link_to "3", store_ratings_path(@store, rating:3), method: :post %>
-   <%= link_to "4", store_ratings_path(@store, rating:4), method: :post %>
-   <%= link_to "5", store_ratings_path(@store, rating:5), method: :post %>
+   <%= link_to image_tag("1s.png", {width: 30}), store_ratings_path(@store, rating:1), method: :post %>
+   <%= link_to image_tag("2s.png", {width: 30}), store_ratings_path(@store, rating:2), method: :post %>
+   <%= link_to image_tag("3s.png", {width: 30}), store_ratings_path(@store, rating:3), method: :post %>
+   <%= link_to image_tag("4s.png", {width: 30}), store_ratings_path(@store, rating:4), method: :post %>
+   <%= link_to image_tag("5s.png", {width: 30}), store_ratings_path(@store, rating:5), method: :post %>
  
 </div>  
 <div>

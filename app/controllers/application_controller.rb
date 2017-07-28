@@ -13,4 +13,19 @@ class ApplicationController < ActionController::Base
       redirect_to login_path, alert:'not authorized- you must be logged in' if current_user.nil?
     end
     
-end
+    helper_method :average_rating
+
+    def average_rating store 
+        store_id = store.id
+        rating = Rating.where(store_id: store_id)
+        sum = 0
+        rating.each do |rating|
+          sum += rating.rating
+        end
+        if raitng.count == 0
+          0
+        else        
+          sum / reviews.count
+        end
+      end
+    end
