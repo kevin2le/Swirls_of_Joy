@@ -4,7 +4,7 @@ class Store < ApplicationRecord
     validates :location, presence:true
     has_many :comments
     has_many :ratings
-    
+    helper_method :average_rating
     def average_rating
         ratings = self.ratings
         sum = 0
