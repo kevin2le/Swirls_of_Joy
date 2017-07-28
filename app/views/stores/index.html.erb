@@ -8,7 +8,7 @@
                 <dd><%= link_to store.name, store_path(store) %> </dd>
                 <dd><%= store.location %></dd>
                 <dd><%= store.contact_info %></dd>
-                <dd>Rating:<%= store.rating%></dd>
+                <dd>Rating:<%= average_rating (store) %> </dd>
         </div>
         <% end %>
     </dl>
